@@ -1,0 +1,65 @@
+pythonのインストール場所
+C:\Users\user_name\AppData\Local\Programs\Python\Python36
+
+https://www.python.jp/install/windows/venv.html
+
+
+仮想環境
+
+ホルダー作成（pyhton1)
+
+cd pyhton1
+#python -m venv .venv
+python -m venv 仮想環境名
+
+
+仮想環境への切り替え
+.venv\Scripts\activate.bat
+仮想環境名\Scripts\activate.bat
+
+仮想環境のコピー
+python -m pip freeze > requirements.txt
+
+一括して仮想環境にパッケージをインストール
+python -m pip install -r requirements.txt
+
+仮想環境の終了
+deactivate
+----------------------------------------------------
+Jupyter Notebook のインストール
+
+pip のアップグレード
+pip install --upgrade pip
+PATH を設定
+python -m pip install --upgrade pip
+
+pip install notebook
+python -m pip install notebook
+python -m pip install --upgrade notebook
+
+起動
+jupyter notebook
+
+
+問題が起きた場合対処・・・・
+jupyter notebook --generate-config
+C:\Users\ユーザー\.jupyter
+にjupyter_notebook_config.py　ができる。
+
+#c.NotebookApp.ip = 'localhost'
+=>
+c.NotebookApp.ip = '0.0.0.0'
+
+
+jupyter notebook
+jupyter notebook --ip='0.0.0.0'
+jupyter notebook --ip='127.0.0.1'
+jupyter notebook --ip=NN0307
+
+
+pip uninstall notebook
+python -m pip install notebook==5.7
+
+jupyter notebook --browser=u'edge'
+jupyter notebook --browser=u'chrome'
+jupyter notebook --browser='Microsoft Edge'

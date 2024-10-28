@@ -1,0 +1,67 @@
+Location of python installation
+C:\Users\user_name\AppData\Local\Programs\Python\Python36
+
+https://www.python.jp/install/windows/venv.html
+
+
+Virtual environment
+
+Create a holder（pyhton1)
+
+cd pyhton1
+#python -m venv .venv
+python -m venv virtual environment name
+
+
+Switch to virtual environment
+.venv\Scripts\activate.bat
+virtual environment name\Scripts\activate.bat
+
+Copy the virtual environment
+python -m pip freeze > requirements.txt
+
+Install the package in the virtual environment in one go
+python -m pip install -r requirements.txt
+
+Exit the virtual environment
+deactivate
+----------------------------------------------------
+Install Jupyter Notebook
+
+Upgrade pip
+pip install --upgrade pip
+Set PATH
+python -m pip install --upgrade pip
+
+pip install notebook
+python -m pip install notebook
+python -m pip install --upgrade notebook
+
+Start
+jupyter notebook
+
+
+What to do in case of problems ・・・・
+jupyter notebook --generate-config
+C:\Users\user.jupyter
+jupyter_notebook_config.py can be created in
+
+#c.NotebookApp.ip = 'localhost'
+=>
+c.NotebookApp.ip = '0.0.0.0'
+
+
+jupyter notebook
+jupyter notebook --ip='0.0.0.0'
+jupyter notebook --ip='127.0.0.1'
+jupyter notebook --ip=NN0307
+
+
+pip uninstall notebook
+python -m pip install notebook==5.7
+
+jupyter notebook --browser=u'edge'
+jupyter notebook --browser=u'chrome'
+jupyter notebook --browser='Microsoft Edge'
+
+Translated with DeepL.com (free version)
